@@ -53,3 +53,8 @@ def test_givenOneYardValue_WhenComparedIfNotNone_ShouldReturnTrue():
     first_yard = Yard(0.0)
     assert first_yard is not None
 
+def test_givenOneYardAndFloatValue_WhenCompared_ShouldReturnTrue():
+    first_yard = Yard(0.0)
+    second_yard = float(0.0)
+    with pytest.raises(AssertionError):
+        assert first_yard == second_yard
