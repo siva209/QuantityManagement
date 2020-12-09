@@ -23,3 +23,10 @@ def test_givenTwoFeetValueInstanceVariable_WhenCompared_ShouldReturnTrue():
 def test_givenOneFeetValue_WhenComparedIfNotNone_ShouldReturnTrue():
     first_feet = Feet(0.0)
     assert first_feet is not None
+
+# testcase4 : Compared one feet value with float value
+def test_givenOneFeetAndFloatValue_WhenCompared_ShouldReturnTrue():
+    first_feet = Feet(0.0)
+    second_feet = float(0.0)
+    with pytest.raises(AssertionError):
+        assert first_feet == second_feet
