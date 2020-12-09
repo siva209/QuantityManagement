@@ -63,3 +63,9 @@ def test_givenTwoDifferentYardValue_WhenCompared_ShouldReturnFalse():
     first_yard = Yard(0.0)
     second_yard = Yard(1.0)
     assert first_yard != second_yard
+
+# Test_case for Inch
+def test_givenTwoInchValue_WhenCompared_ShouldReturnTrue():
+    first_inch = Inch(0.0)
+    second_inch = Inch(0.0)
+    assert first_inch == second_inch
