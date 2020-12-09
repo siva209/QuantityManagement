@@ -36,3 +36,9 @@ def test_givenTwoDifferentFeetValue_WhenCompared_ShouldReturnFalse():
     first_feet = Feet(0.0)
     second_feet = Feet(1.0)
     assert first_feet != second_feet
+
+# Test_case for Yard
+def test_givenTwoYardValue_WhenCompared_ShouldReturnTrue():
+    first_yard = Yard(0.0)
+    second_yard = Yard(0.0)
+    assert first_yard == second_yard
