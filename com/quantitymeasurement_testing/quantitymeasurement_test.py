@@ -58,3 +58,8 @@ def test_givenOneYardAndFloatValue_WhenCompared_ShouldReturnTrue():
     second_yard = float(0.0)
     with pytest.raises(AssertionError):
         assert first_yard == second_yard
+
+def test_givenTwoDifferentYardValue_WhenCompared_ShouldReturnFalse():
+    first_yard = Yard(0.0)
+    second_yard = Yard(1.0)
+    assert first_yard != second_yard
