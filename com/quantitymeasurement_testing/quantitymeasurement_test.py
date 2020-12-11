@@ -115,3 +115,11 @@ def test_given_1FeetAnd_1YardValue_WhenCompared_ShouldReturnFalse():
     first_feet = QuantityMeasurement(Length.FEET,1.0)
     second_yard = QuantityMeasurement(Length.YARD,1.0)
     assert first_feet != second_yard
+
+
+# case3 : for compare 1in != 1yd
+def test_given_OneInch_And_OneYardValue_WhenCompared_ShouldReturnFalse():
+    first_inch = QuantityMeasurement(Length.INCH,1.0)
+    second_yard = QuantityMeasurement(Length.YARD,1.0)
+    assert first_inch != second_yard
+
