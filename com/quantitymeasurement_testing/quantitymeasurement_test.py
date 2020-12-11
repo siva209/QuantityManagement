@@ -138,3 +138,11 @@ def test_given_1Yard_And_3FeetValue_WhenCompared_ShouldReturnTrue():
     second_feet = QuantityMeasurement(Length.FEET,3.0)
     with pytest.raises(AssertionError):
         assert first_yard == second_feet
+
+
+# case6 : for compare 1yd = 36in
+def test_given_OneYardAnd_36InchValue_WhenCompared_ShouldReturnTrue():
+    first_yard = QuantityMeasurement(Length.YARD,1.0)
+    second_inch = QuantityMeasurement(Length.INCH,36.0)
+    with pytest.raises(AssertionError):
+        assert first_yard == second_inch
