@@ -45,3 +45,8 @@ def test_givenZeroYardandZeroYard_WhenCompared_ShouldReturnTrue():
     first_yard = QuantityMeasurement(Length.YARD, 0.0)
     second_yard = QuantityMeasurement(Length.YARD, 0.0)
     assert first_yard == second_yard
+
+def test_givenZeroYardValueandInstanceVariable_WhenCompared_ShouldReturnTrue():
+    first_yard = QuantityMeasurement(Length.YARD,0.0)
+    second_yard = first_yard
+    assert first_yard == second_yard
