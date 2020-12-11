@@ -102,9 +102,16 @@ def test_givenZeroInchandOneInch_WhenCompared_ShouldReturnFalse():
 
 
 # UC2
-# Test_case1 : For compare 3ft = 1yd
+# case1 : for compare 3ft = 1yd
 def test_given_3FeetAnd_1YardValue_WhenCompared_ShouldReturnTrue():
     first_feet = QuantityMeasurement(Length.FEET,3.0)
     second_yard = QuantityMeasurement(Length.YARD,1.0)
     with pytest.raises(AssertionError):
         assert first_feet == second_yard
+
+
+# case2 : for compare 1ft != 1yd
+def test_given_1FeetAnd_1YardValue_WhenCompared_ShouldReturnFalse():
+    first_feet = QuantityMeasurement(Length.FEET,1.0)
+    second_yard = QuantityMeasurement(Length.YARD,1.0)
+    assert first_feet != second_yard
