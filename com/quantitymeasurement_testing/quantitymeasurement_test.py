@@ -17,3 +17,9 @@ def test_givenTwoFeetValueInstanceVariable_WhenCompared_ShouldReturnTrue():
     first_feet = Feet(0.0)
     second_feet = first_feet
     assert first_feet == second_feet
+
+
+# case3 : comparing one feet value should return false when None
+def test_givenZeroFtValue_WhenComparedIfNotNone_ShouldReturnTrue():
+    first_feet = QuantityMeasurement(Length.FEET, 0.0)
+    assert first_feet is not None
