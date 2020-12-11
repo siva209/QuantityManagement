@@ -75,3 +75,10 @@ def test_givenZeroInchandZeroInchValue_WhenCompared_ShouldReturnTrue():
     first_inch = QuantityMeasurement(Length.INCH,0.0)
     second_inch = QuantityMeasurement(Length.INCH,0.0)
     assert first_inch == second_inch
+
+
+def test_givenZeroInchValueInstanceVariable_WhenCompared_ShouldReturnTrue():
+    first_inch = QuantityMeasurement(Length.INCH,0.0)
+    second_inch = first_inch
+    assert first_inch == second_inch
+
