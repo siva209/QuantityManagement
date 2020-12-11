@@ -55,3 +55,10 @@ def test_givenZeroYardValueandInstanceVariable_WhenCompared_ShouldReturnTrue():
 def test_givenZeroYardValue_WhenComparedIfNotNone_ShouldReturnTrue():
     first_yard = QuantityMeasurement(Length.YARD,0.0)
     assert first_yard is not None
+
+
+def test_givenZeroYardAndFloatValue_WhenCompared_ShouldReturnTrue():
+    first_yard = QuantityMeasurement(Length.YARD,0.0)
+    second_yard = float(0.0)
+    with pytest.raises(AttributeError):
+        assert first_yard == second_yard
