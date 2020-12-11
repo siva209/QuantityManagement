@@ -62,3 +62,9 @@ def test_givenZeroYardAndFloatValue_WhenCompared_ShouldReturnTrue():
     second_yard = float(0.0)
     with pytest.raises(AttributeError):
         assert first_yard == second_yard
+
+
+def test_givenZeroYardandOneYard_WhenCompared_ShouldReturnFalse():
+    first_yard = QuantityMeasurement(Length.YARD,0.0)
+    second_yard = QuantityMeasurement(Length.YARD,1.0)
+    assert first_yard != second_yard
