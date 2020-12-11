@@ -82,3 +82,14 @@ def test_givenZeroInchValueInstanceVariable_WhenCompared_ShouldReturnTrue():
     second_inch = first_inch
     assert first_inch == second_inch
 
+
+def test_givenZeroInchValue_WhenComparedIfNotNone_ShouldReturnTrue():
+    first_inch = QuantityMeasurement(Length.INCH,0.0)
+    assert first_inch is not None
+
+
+def test_givenZeroInchAndFloatValue_WhenCompared_ShouldReturnTrue():
+    first_inch = QuantityMeasurement(Length.INCH,0.0)
+    second_inch = float(0.0)
+    with pytest.raises(AttributeError):
+        assert first_inch == second_inch
