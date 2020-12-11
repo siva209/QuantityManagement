@@ -68,3 +68,10 @@ def test_givenZeroYardandOneYard_WhenCompared_ShouldReturnFalse():
     first_yard = QuantityMeasurement(Length.YARD,0.0)
     second_yard = QuantityMeasurement(Length.YARD,1.0)
     assert first_yard != second_yard
+
+#testcase:for Inch
+
+def test_givenZeroInchandZeroInchValue_WhenCompared_ShouldReturnTrue():
+    first_inch = QuantityMeasurement(Length.INCH,0.0)
+    second_inch = QuantityMeasurement(Length.INCH,0.0)
+    assert first_inch == second_inch
