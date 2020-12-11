@@ -50,3 +50,8 @@ def test_givenZeroYardValueandInstanceVariable_WhenCompared_ShouldReturnTrue():
     first_yard = QuantityMeasurement(Length.YARD,0.0)
     second_yard = first_yard
     assert first_yard == second_yard
+
+
+def test_givenZeroYardValue_WhenComparedIfNotNone_ShouldReturnTrue():
+    first_yard = QuantityMeasurement(Length.YARD,0.0)
+    assert first_yard is not None
