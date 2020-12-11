@@ -35,8 +35,13 @@ def test_givenZeroFeetAndFloatValue_WhenCompared_ShouldReturnTrue():
 
 # case5 : comparing two different feet value
 def test_givenZeroFeetandOneFeet_WhenCompared_ShouldReturnFalse():
-    first_feet = QuantityMeasurement(Length.FEET,0.0)
-    second_feet = QuantityMeasurement(Length.FEET,1.0)
+    first_feet = QuantityMeasurement(Length.FEET, 0.0)
+    second_feet = QuantityMeasurement(Length.FEET, 1.0)
     assert first_feet != second_feet
 
 
+# cases for Yard
+def test_givenZeroYardandZeroYard_WhenCompared_ShouldReturnTrue():
+    first_yard = QuantityMeasurement(Length.YARD, 0.0)
+    second_yard = QuantityMeasurement(Length.YARD, 0.0)
+    assert first_yard == second_yard
