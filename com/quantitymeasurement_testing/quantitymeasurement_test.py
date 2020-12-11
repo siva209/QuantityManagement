@@ -31,3 +31,12 @@ def test_givenZeroFeetAndFloatValue_WhenCompared_ShouldReturnTrue():
     second_feet = float(0.0)
     with pytest.raises(AttributeError):
         assert first_feet == second_feet
+
+
+# case5 : comparing two different feet value
+def test_givenZeroFeetandOneFeet_WhenCompared_ShouldReturnFalse():
+    first_feet = QuantityMeasurement(Length.FEET,0.0)
+    second_feet = QuantityMeasurement(Length.FEET,1.0)
+    assert first_feet != second_feet
+
+
